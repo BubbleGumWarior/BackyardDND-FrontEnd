@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="nav-container">
+        <a class="Logout" href="index.html" data-tool-tip="Log Out">Log Out</a>
+        <div class="navigation">
+            <ul>
+                <li class="list active" onclick="openHome()">
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list" onclick="openRolls()">
+                    <a href="#">
+                        <i class="fa-solid fa-dice-d20"></i>
+                        <span class="text">Rolls</span>
+                    </a>
+                </li>
+                <li class="list" onclick="openBoard()">
+                    <a href="#">
+                        <i class="fa-solid fa-person-chalkboard"></i>
+                        <span class="text">Board</span>
+                    </a>
+                </li>
+                <li class="list" onclick="openNotes()">
+                    <a href="#">
+                        <i class="fa-solid fa-note-sticky"></i>
+                        <span class="text">Notes</span>
+                    </a>
+                </li>
+                <li class="list" onclick="openGallery()">
+                    <a href="#">
+                        <i class="fa-solid fa-image"></i>
+                        <span class="text">Gallery</span>
+                    </a>
+                </li>
+                <li class="list" onclick="openTime()">
+                    <a href="#">
+                        <i class="fa-solid fa-clock"></i>
+                        <span class="text">Time</span>
+                    </a>
+                </li>
+                <div class="indicator">
+
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="main-container">
+        <div id="home-modal" class="modals">
+            <div class="modal-content">
+                <header class="modalHeader">
+                    <span>Home</span>
+                </header>
+                <div class="modal-container">
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                </div>
+                <footer class="modal-container">
+                    <p>Modal Footer</p>
+                </footer>
+            </div>
+        </div>
+        <div id="rolls-modal" class="modals">
+            <div class="modal-content">
+                <header class="modalHeader">
+                    <span>Rolls</span>
+                </header>
+                <div class="modal-container">
+                    <form action="" id="form">
+                        <div class="row">
+                            <div class="form-item col-3 padd-15">
+                                <div class="form-group">
+                                    <a href="#">D4</a>
+                                </div>
+                            </div>
+                            <div class="form-item col-3 padd-15">
+                                <div class="form-group">
+                                    <a href="#">D6</a>
+                                </div>
+                            </div>
+                            <div class="form-item col-3 padd-15">
+                                <div class="form-group">
+                                    <a href="#">D8</a>
+                                </div>
+                            </div>
+                            <div class="form-item col-3 padd-15">
+                                <div class="form-group">
+                                    <a href="#">D10</a>
+                                </div>
+                            </div>
+                            <div class="form-item col-3 padd-15">
+                                <div class="form-group">
+                                    <a href="#">D12</a>
+                                </div>
+                            </div>
+                            <div class="form-item col-3 padd-15">
+                                <div class="form-group">
+                                    <a href="#">D20</a>
+                                </div>
+                            </div>
+                            <div class="form-item col-3 padd-15">
+                                <div class="form-group">
+                                    <a href="#">D100</a>
+                                </div>
+                            </div>
+                            <div class="form-item col-3 padd-15">
+                                <div class="form-group">
+                                    <a href="#">XX</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <footer class="modal-container">
+                    <p>Modal Footer</p>
+                </footer>
+            </div>
+        </div>
+        <div id="board-modal" class="modals">
+            <div class="modal-content">
+                <header class="modalHeader">
+                    <span>board</span>
+                </header>
+                <div class="modal-container">
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                </div>
+                <footer class="modal-container">
+                    <p>Modal Footer</p>
+                </footer>
+            </div>
+        </div>
+        <div id="notes-modal" class="modals">
+            <div class="modal-content">
+                <header class="modalHeader">
+                    <span>Notes</span>
+                </header>
+                <div class="modal-container">
+                    <div class="row">
+                        <div class="note col-3">
+                            <h2>Note 1</h2>
+                            <textarea class="note-control" placeholder="Message1" name="message" id="message1"></textarea>
+                        </div>
+                        <div class="note col-3">
+                            <h2>Note 2</h2>
+                            <textarea class="note-control" placeholder="Message1" name="message" id="message2"></textarea>
+                        </div>
+                        <div class="note col-3">
+                            <h2>Note 3</h2>
+                            <textarea class="note-control" placeholder="Message1" name="message" id="message3"></textarea>
+                        </div>
+                        <div class="note col-3">
+                            <h2>Note 4</h2>
+                            <textarea class="note-control" placeholder="Message1" name="message" id="message4"></textarea>
+                        </div>
+                    </div>
+                    <row>
+                        <div class="note col-3">
+                            <h2>Note 5</h2>
+                            <textarea class="note-control" placeholder="Message1" name="message" id="message5"></textarea>
+                        </div>
+                    </row>
+                </div>
+                <footer class="modal-container">
+                    <p>Modal Footer</p>
+                </footer>
+            </div>
+        </div>
+        <div id="gallery-modal" class="modals">
+            <div class="modal-content">
+                <header class="modalHeader">
+                    <span>Gallery</span>
+                </header>
+                <div class="modal-container">
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                </div>
+                <footer class="modal-container">
+                    <p>Modal Footer</p>
+                </footer>
+            </div>
+        </div>
+        <div id="time-modal" class="modals">
+            <div class="modal-content">
+                <header class="modalHeader">
+                    <span>Time</span>
+                </header>
+                <div class="modal-container">
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                </div>
+                <footer class="modal-container">
+                    <p>Modal Footer</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'))
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click', activeLink));
+    </script>
+    <script>
+        const modals = document.querySelectorAll('.modals');
+        function openHome(){
+            modals.forEach((item) =>
+            item.style.display='none')
+            document.getElementById('home-modal').style.display='block';
+        }
+        function openRolls(){
+            modals.forEach((item) =>
+                item.style.display='none')
+            document.getElementById('rolls-modal').style.display='block'
+        }
+        function openBoard(){
+            modals.forEach((item) =>
+                item.style.display='none')
+            document.getElementById('board-modal').style.display='block'
+        }
+        function openNotes(){
+            modals.forEach((item) =>
+                item.style.display='none')
+            document.getElementById('notes-modal').style.display='block'
+        }
+        function openGallery(){
+            modals.forEach((item) =>
+                item.style.display='none')
+            document.getElementById('gallery-modal').style.display='block'
+        }
+        function openTime(){
+            modals.forEach((item) =>
+                item.style.display='none')
+            document.getElementById('time-modal').style.display='block'
+        }
+    </script>
+</body>
+</html>
