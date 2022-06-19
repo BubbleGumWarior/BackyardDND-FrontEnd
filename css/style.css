@@ -404,66 +404,63 @@ h2{
     font-size: 16px;
 }
 
-.modals .modal-content .column{
-    width: 50%;
-    padding: 15px;
-}
-
-.modals .modal-content .stats-group{
-    display: inline-flex;
-    width: 100%;
-}
-
-.modals .modal-content .biology{
-    background-color: #141414;
-    border: 1px solid #ffce0a;
-    padding: 15px;
-    border-radius: 20px;
-    width: 100%;
-    flex: 0 0 100%;
-}
-.modals .modal-content .biology image{
-    max-width: 516px;
-}
-
-.modals .modal-content .main-stats{
-    display: block;
-    background-color: #141414;
-    border: 1px solid #ffce0a;
-    padding: 15px;
-    border-radius: 20px;
-    width: 100%;
-    flex: 0 0 100%;
-    margin-top: 15px;
-}
-
-.modals .modal-content .main-stats .left{
-    text-align: center;
+.display-two{
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
 }
 
-.modals .modal-content .main-stats .left .main-stat-group{
+.biology{
+    flex: 0 0 calc(50% - 30px);
+    padding: 15px;
     border: 1px solid #ffce0a;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 15px;
 }
 
-.modals .modal-content .sub-stats{
-    background-color: #141414;
-    border: 1px solid #ffce0a;
+.main-stats{
+    flex: 0 0 calc(50% - 30px);
     padding: 15px;
-    border-radius: 20px;
-    width: 100%;
-    flex: 0 0 100%;
+    border: 1px solid #ffce0a;
+    border-radius: 15px;
+    margin: 15px;
 }
 
-.modals .modal-content .weapon-proficiencies{
-    background-color: #141414;
+.main-stat-group{
+    flex: 0 0 calc(50% - 30px);
+    text-align: center;
+    border-radius: 25px;
     border: 1px solid #ffce0a;
+    margin: 15px;
+}
+
+.sub-stats{
+    flex: 0 0 calc(50% - 30px);
     padding: 15px;
-    border-radius: 20px;
-    width: 100%;
-    flex: 0 0 100%;
-    margin-top: 15px;
+    border: 1px solid #ffce0a;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.sub-stat-group{
+    flex: 0 0 calc(50% - 30px);
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #ffce0a;
+    margin: 15px;
+}
+
+.weapon-stats{
+    flex: 0 0 calc(50% - 30px);
+    padding: 15px;
+    border: 1px solid #ffce0a;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.weapon-stat-group{
+    flex: 0 0 calc(50% - 30px);
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #ffce0a;
+    margin: 15px;
 }
