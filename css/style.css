@@ -83,7 +83,7 @@ body{
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     padding: 10px 25px;
     font-size: 16px;
     color: black;
@@ -96,7 +96,7 @@ body{
     padding: 10px;
     margin-top: 50px;
     border-radius: 20px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     background-color: #545454;
 }
 
@@ -106,7 +106,7 @@ body{
     align-items: center;
     width: 100%;
     letter-spacing: 2px;
-    color: #ffce0a;
+    color: var(--skin-color);
     font-size: 20px;
 }
 
@@ -115,11 +115,11 @@ body{
     display: flex;
     padding: 10px;
     justify-content: center;
-    color: #ffce0a;
+    color: var(--skin-color);
 }
 
 h2{
-    color: #ffce0a;
+    color: var(--skin-color);
 }
 
 .nav-container{
@@ -137,12 +137,12 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffce0a;
+    color: var(--skin-color);
     border-radius: 25px;
 }
 
 .nav-container .Logout:hover{
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
 }
 
 .navigation{
@@ -188,7 +188,7 @@ h2{
     font-size: 1.5em;
     text-align: center;
     transition: 0.5s;
-    color: #ffce0a;
+    color: var(--skin-color);
 }
 
 .navigation ul li.active a i{
@@ -198,7 +198,7 @@ h2{
 
 .navigation ul li a .text{
     position: absolute;
-    color: #ffce0a;
+    color: var(--skin-color);
     font-weight: 400;
     transition: 0.5s;
     opacity: 0;
@@ -215,7 +215,7 @@ h2{
     top: -50%;
     width: 70px;
     height: 70px;
-    background: #ffce0a;
+    background: var(--skin-color);
     border-radius: 50%;
     border: 6px solid #141414;
     transition: 0.5s;
@@ -270,7 +270,7 @@ h2{
 
 .modals{
     background: #262626;
-    color: #ffce0a;
+    color: var(--skin-color);
     display: none;
     flex: 0 0 100%;
     max-width: 100%;
@@ -280,14 +280,14 @@ h2{
 
 .modals header{
     font-size: 2em;
-    border-bottom: 1px solid #ffce0a;
+    border-bottom: 1px solid var(--skin-color);
     width: auto;
     margin-bottom: 20px;
 }
 
 .modals footer{
     font-size: 2em;
-    border-top: 1px solid #ffce0a;
+    border-top: 1px solid var(--skin-color);
     width: auto;
     margin-top: 20px;
 }
@@ -297,7 +297,7 @@ h2{
     align-items: center;
     justify-content: center;
     background-color: #141414;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -305,11 +305,11 @@ h2{
 }
 
 .modals .form-group:hover{
-    box-shadow: 0 0 20px #ffce0a;
+    box-shadow: 0 0 20px var(--skin-color);
 }
 
 .modals a{
-    color: #ffce0a;
+    color: var(--skin-color);
     font-size: 30px;
 }
 
@@ -318,12 +318,12 @@ h2{
     height: 250px;
     border-radius: 10px;
     padding: 10px 25px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     color: black;
 }
 
 .modals textarea:hover{
-    box-shadow: 0 0 20px #ffce0a;
+    box-shadow: 0 0 20px var(--skin-color);
 }
 
 .modals .weather .current-weather{
@@ -356,8 +356,8 @@ h2{
 }
 
 .modals .weather .form-group .column:hover{
-    color: #ffce0a;
-    text-shadow: 0 0 20px #ffce0a;
+    color: var(--skin-color);
+    text-shadow: 0 0 20px var(--skin-color);
 }
 
 .modals .time-log .time{
@@ -375,7 +375,7 @@ h2{
     height: 50px;
     background-color: #141414;
     border-radius: 20px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     margin: 20px;
 }
 .time-watch h2{
@@ -387,7 +387,7 @@ h2{
     background-color: #141414;
     width: 375px;
     border-radius: 25px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
 }
 .modals .time-log .event-group{
     display: flex;
@@ -412,7 +412,7 @@ h2{
 .biology{
     flex: 0 0 calc(50% - 30px);
     padding: 15px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     border-radius: 15px;
     margin: 15px;
 }
@@ -420,7 +420,7 @@ h2{
 .main-stats{
     flex: 0 0 calc(50% - 30px);
     padding: 15px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     border-radius: 15px;
     margin: 15px;
 }
@@ -429,14 +429,14 @@ h2{
     flex: 0 0 calc(50% - 30px);
     text-align: center;
     border-radius: 25px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     margin: 15px;
 }
 
 .sub-stats{
     flex: 0 0 calc(50% - 30px);
     padding: 15px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     border-radius: 15px;
     margin: 15px;
 }
@@ -445,14 +445,14 @@ h2{
     flex: 0 0 calc(50% - 30px);
     text-align: center;
     border-radius: 25px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     margin: 15px;
 }
 
 .weapon-stats{
     flex: 0 0 calc(50% - 30px);
     padding: 15px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     border-radius: 15px;
     margin: 15px;
 }
@@ -461,6 +461,69 @@ h2{
     flex: 0 0 calc(50% - 30px);
     text-align: center;
     border-radius: 25px;
-    border: 1px solid #ffce0a;
+    border: 1px solid var(--skin-color);
     margin: 15px;
+}
+
+.box {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    padding: 5px;
+    border: 2px solid #b78846;
+    box-shadow: 0 0 20px var(--skin-color);
+}
+.box:before, .box:after {
+    content: "•";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    color: #b78846;
+    border: 2px solid #b78846;
+    line-height: 12px;
+    top: 5px;
+    text-align: center;
+}
+.box:before {
+    left: 5px;
+}
+.box:after {
+    right: 5px;
+}
+.box .box-inner {
+    position: relative;
+    border: 2px solid #b78846;
+    padding: 40px;
+}
+.box .box-inner:before, .box .box-inner:after {
+    content: "•";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    color: #b78846;
+    border: 2px solid #b78846;
+    line-height: 12px;
+    bottom: -2px;
+    text-align: center;
+}
+.box .box-inner:before {
+    left: -2px;
+}
+.box .box-inner:after {
+    right: -2px;
+}
+
+
+
+
+@media (max-width: 800px){
+    .biology, .main-stats, .sub-stats, .weapon-stats{
+        flex: 0 0 100%;
+    }
 }
