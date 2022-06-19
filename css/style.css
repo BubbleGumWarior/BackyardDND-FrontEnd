@@ -409,118 +409,92 @@ h2{
     flex-wrap: wrap;
 }
 
-.biology{
-    flex: 0 0 calc(50% - 30px);
-    padding: 15px;
+.stat-block h1{
+    flex: 0 0 100%;
+    margin: 15px;
+    max-height: 50px;
+}
+.stat-block{
+    flex: 0 0 33.33%;
+    flex-wrap: wrap;
     border: 1px solid var(--skin-color);
     border-radius: 15px;
-    margin: 15px;
 }
 
-.main-stats{
-    flex: 0 0 calc(50% - 30px);
-    padding: 15px;
-    border: 1px solid var(--skin-color);
-    border-radius: 15px;
-    margin: 15px;
-}
-
-.main-stat-group{
-    flex: 0 0 calc(50% - 30px);
-    text-align: center;
-    border-radius: 25px;
-    border: 1px solid var(--skin-color);
-    margin: 15px;
-}
-
-.sub-stats{
-    flex: 0 0 calc(50% - 30px);
-    padding: 15px;
-    border: 1px solid var(--skin-color);
-    border-radius: 15px;
-    margin: 15px;
-}
-
-.sub-stat-group{
-    flex: 0 0 calc(50% - 30px);
-    text-align: center;
-    border-radius: 25px;
-    border: 1px solid var(--skin-color);
-    margin: 15px;
-}
-
-.weapon-stats{
-    flex: 0 0 calc(50% - 30px);
-    padding: 15px;
-    border: 1px solid var(--skin-color);
-    border-radius: 15px;
-    margin: 15px;
-}
-
-.weapon-stat-group{
-    flex: 0 0 calc(50% - 30px);
-    text-align: center;
-    border-radius: 25px;
-    border: 1px solid var(--skin-color);
-    margin: 15px;
-}
-
-.box {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    background-color: rgba(0, 0, 0, 0.5);
+.stat-group{
     width: 100%;
-    max-width: 600px;
-    padding: 5px;
-    border: 2px solid #b78846;
-    box-shadow: 0 0 20px var(--skin-color);
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--skin-color);
+    padding: 15px;
 }
-.box:before, .box:after {
-    content: "•";
-    position: absolute;
-    width: 14px;
-    height: 14px;
+
+.stat-title{
+    line-height: 1;
+    text-transform: capitalize;
+    border-right: 1px solid var(--skin-color);
+    text-align: center;
+    height: 255px;
+    padding-right: 15px;
+    width: 40px;
     font-size: 14px;
-    color: #b78846;
-    border: 2px solid #b78846;
-    line-height: 12px;
-    top: 5px;
+}
+
+.stat-value{
+    flex: 0 0 20%;
+    align-self: center;
     text-align: center;
 }
-.box:before {
-    left: 5px;
-}
-.box:after {
-    right: 5px;
-}
-.box .box-inner {
-    position: relative;
-    border: 2px solid #b78846;
-    padding: 40px;
-}
-.box .box-inner:before, .box .box-inner:after {
-    content: "•";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    font-size: 14px;
-    color: #b78846;
-    border: 2px solid #b78846;
-    line-height: 12px;
-    bottom: -2px;
+
+.stat-name{
+    flex: 0 0 50%;
+    align-self: center;
+    padding-left: 15px;
     text-align: center;
 }
-.box .box-inner:before {
-    left: -2px;
+
+.biology-block{
+    flex: 0 0 33.33%;
+    padding: 0 15px;
 }
-.box .box-inner:after {
-    right: -2px;
+
+.details-block{
+    border: 1px solid var(--skin-color);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
+.description-block{
+    margin-top: 15px;
+    border: 1px solid var(--skin-color);
+    border-radius: 15px;
+    padding: 15px;
+}
 
+.stat-block .display-two{
+    margin: 0 15px;
+}
+.stat-block .display-two h1{
+    flex: 0 0 100%;
+    margin: 0;
+    border-top: 1px solid var(--skin-color);
+}
 
+.stat-block .display-two h4{
+    margin: 25px;
+}
+
+.family{
+    padding: 15px;
+    flex: 0 0 50%;
+    border-right: 1px solid var(--skin-color);
+}
+
+.friends{
+    flex: 0 0 50%;
+    padding: 15px;
+}
 
 @media (max-width: 800px){
     .biology, .main-stats, .sub-stats, .weapon-stats{
