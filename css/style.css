@@ -294,14 +294,14 @@ h2{
 
 .modals .form-group{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 0 0 100%;
     background-color: #141414;
     border: 1px solid var(--skin-color);
-    width: 40px;
-    height: 40px;
+    max-width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin: 15px 15px;
+    align-items: center;
+    margin: 15px;
 }
 
 .rolls-group{
@@ -313,27 +313,83 @@ h2{
     flex-wrap: wrap;
 }
 
-.modals .column{
-    flex: 0 0 33.33%;
+.rolls-group input{
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #141414;
+    border: 1px solid var(--skin-color);
+}
+
+.modals .rolls-group .column{
+    flex: 33.33%;
     width: 33.33%;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px;
+    justify-content: center;
+    align-content: center;
 }
 
 .modals .rolls-group h1{
     font-size: 16px;
 }
 
+.roll-holder{
+    display: flex;
+    flex-wrap: wrap;
+}
+.roll-holder h1{
+    flex: 0 0 100%;
+}
+
+.roll-result{
+    flex: 0 0 75%;
+    text-align: center;
+}
+
+.modals .rolls-group{
+    flex: 0 0 25%;
+    text-align: center;
+}
+
 .modals .rolls-group input{
     width: 100%;
 }
 
-.modals .form-group:hover{
-    box-shadow: 0 0 20px var(--skin-color);
+.roll-result h1{
+    font-size: 128px;
+    border: 3px solid var(--skin-color);
+    border-radius: 50%;
+    margin: 50px 20%;
+    box-shadow: 0 0 50px var(--skin-color);
+    text-shadow: 0 0 20px black;
 }
 
-.modals a{
-    color: var(--skin-color);
-    font-size: 30px;
+.roll-result h2{
+    font-size: 64px;
+}
+
+.roll-holder a{
+    width: 30%;
+    height: 64px;
+    background-color: var(--skin-color);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 32px;
+    border-radius: 80px;
+    margin: 0 35%;
+}
+
+.roll-holder a:hover{
+    cursor: pointer;
+}
+
+.modals .form-group:hover{
+    box-shadow: 0 0 20px var(--skin-color);
 }
 
 .modals textarea{
