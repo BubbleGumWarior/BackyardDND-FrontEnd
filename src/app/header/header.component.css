@@ -13,7 +13,7 @@ body{
   line-height: 1.5;
   font-size: 16px;
   font-family: 'Montserrat', serif;
-  background-color: #1B1A17;
+  background-color: #1B1A17 !important;
   color: #E3B04B;
   display: flex;
   justify-content: center;
@@ -113,7 +113,7 @@ body{
   height: 20px;
   background: transparent;
   border-top-left-radius: 20px;
-  box-shadow: 0px -10px 0 0 #1B1A17;
+  box-shadow: 0 -10px 0 0 #1B1A17;
 }
 .navigation ul li:nth-child(1).active ~ .indicator{
   transform: translateX(calc(70px * 0));

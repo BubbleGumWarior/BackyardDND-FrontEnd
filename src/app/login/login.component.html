@@ -1,37 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<section>
   <div class="container">
-    <div class="row">
-      <div class="popUp">
-        <form (submit)="onLogin($event)">
-          <h1>Login Screen</h1>
-          <div class="inputGroup">
-            <h4>Username:</h4>
-            <input
-              type="text"
-              class="form-control"
-              [(ngModel)]="userName"
-            >
-          </div>
-          <div class="inputGroup">
-            <h4>Password:</h4>
-            <input
-              type="text"
-              class="form-control"
-              [(ngModel)]="userPassword"
-            >
-          </div>
-          <button class="btn btn-primary" type="submit" value="login">Login</button>
+    <div class="user signInBox">
+      <div class="imgBox">
+        <img src="../../assets/town.jpg" alt="">
+      </div>
+      <div class="formBox">
+        <form>
+          <h2>Log In</h2>
+          <input type="text" placeholder="Username" [(ngModel)]="userName" name="userName">
+          <input type="password" placeholder="Password"[(ngModel)]="password" name="password">
+          <input type="submit" value="Login" (click)="logIn()">
+          <p class="signup">don't have an account? <a href="#" (click)="toggleLogin()">Sign up. </a></p>
         </form>
       </div>
     </div>
+
+    <div class="user signUpBox active">
+      <div class="formBox">
+        <form>
+          <h2>Create an Account</h2>
+          <input type="text" placeholder="Username">
+          <input type="text" placeholder="Email">
+          <input type="password" placeholder="Create Password">
+          <input type="password" placeholder="Confirm Password">
+          <input type="submit" value="Sign Up">
+          <p class="signup">Already have an account? <a href="#" (click)="toggleLogin()">Log in. </a></p>
+        </form>
+      </div>
+      <div class="imgBox">
+        <img src="../../assets/forest.jpg" alt="">
+      </div>
+    </div>
   </div>
-</body>
+</section>
 
-
-</html>
