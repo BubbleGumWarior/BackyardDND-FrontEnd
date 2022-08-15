@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Header</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+  <div class="navigation">
+    <ul>
+      <li id="menuHome" class="list active" (click)="activeLink($event.composedPath())">
+        <a>
+          <i class="fa-solid fa-house"></i>
+          <span class="text">Home</span>
+        </a>
+      </li>
+
+      <li id="menuBoard" class="list" (click)="activeLink($event.composedPath())">
+        <a>
+          <i class="fa-solid fa-person-chalkboard"></i>
+          <span class="text">Board</span>
+        </a>
+      </li>
+
+      <li id="menuRolls" class="list" (click)="activeLink($event.composedPath())">
+        <a>
+          <i class="fa-solid fa-dice-d20"></i>
+          <span class="text">Rolls</span>
+        </a>
+      </li>
+
+      <li id="menuNotes" class="list" (click)="activeLink($event.composedPath())">
+        <a>
+          <i class="fa-solid fa-note-sticky"></i>
+          <span class="text">Notes</span>
+        </a>
+      </li>
+
+      <li id="menuGallery" class="list" (click)="activeLink($event.composedPath())">
+        <a>
+          <i class="fa-solid fa-image"></i>
+          <span class="text">Gallery</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+</body>
+</html>

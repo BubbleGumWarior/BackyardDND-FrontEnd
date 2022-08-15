@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="popUp">
+        <form (submit)="onLogin($event)">
+          <h1>Login Screen</h1>
+          <div class="inputGroup">
+            <h4>Username:</h4>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="userName"
+            >
+          </div>
+          <div class="inputGroup">
+            <h4>Password:</h4>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="userPassword"
+            >
+          </div>
+          <button class="btn btn-primary" type="submit" value="login">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>

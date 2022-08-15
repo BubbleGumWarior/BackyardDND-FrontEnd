@@ -1,0 +1,8 @@
+<body>
+  <app-header (menuEvent)="receiveMessage($event)"></app-header>
+  <app-home [hidden]="!arrActive[0]"></app-home>
+  <app-board [hidden]="!arrActive[1]"></app-board>
+  <app-rolls [hidden]="!arrActive[2]"></app-rolls>
+  <app-notes [hidden]="!arrActive[3]"></app-notes>
+  <app-gallery [hidden]="!arrActive[4]"></app-gallery>
+</body>
