@@ -3,6 +3,145 @@ body{
   line-height: 1.5;
   font-size: 16px;
   font-family: 'Montserrat', serif;
-  background-color: #1B1A17;
   color: #E3B04B;
+  background: #1B1A17;
+  height: auto;
 }
+.row{
+  display: flex;
+}
+.col-10{
+  flex: 0 0 auto;
+  width: 10%;
+  padding: 15px;
+}
+.col-20{
+  flex: 0 0 auto;
+  width: 20%;
+  padding: 15px;
+}
+.col-30{
+  flex: 0 0 auto;
+  width: 30%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.col-33{
+  flex: 0 0 auto;
+  width: 33.33%;
+  padding: 15px;
+}
+.col-50{
+  flex: 0 0 auto;
+  width: 50%;
+  padding: 15px;
+}
+.col-60{
+  flex: 0 0 auto;
+  width: 60%;
+  padding: 15px;
+}
+.col-70{
+  flex: 0 0 auto;
+  width: 70%;
+  padding: 15px;
+  text-align: center;
+  background: #1B1A17;
+  box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
+}
+.col-80{
+  flex: 0 0 auto;
+  width: 80%;
+  padding: 15px;
+}
+.col-100{
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 15px;
+}
+.navigation{
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: #1B1A17;
+  box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-delay: 0.8s;
+}
+.navigation.active{
+  width: 200px;
+  height: 200px;
+  transition-delay: 0s;
+}
+.navigation span{
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E3B04B;
+  border-radius: 50%;
+  transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+  transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+.navigation.active span{
+  width: 45px;
+  height: 45px;
+  background: #1B1A17;
+  box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
+  transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+}
+.navigation.active span:hover{
+  background: #383838;
+  box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
+  transition: 0.5s;
+}
+.navigation span i{
+  transition: 0.5s;
+  font-size: 0;
+  font-style: normal;
+}
+.navigation.active span i{
+  font-size: 1.15em;
+  color: #E3B04B;
+  transition-delay: calc(0.1s * var(--i));
+}
+.navigation.active span:hover i{
+  color: #FFD700;
+  transition: 0.5s;
+  font-weight: 900;
+}
+.rollGroup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1, h2, h3, h4{
+  width: 100%;
+  padding: 25px;
+}
+h1{
+  font-size: 60px;
+}
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 24px;
+}
+h4{
+  font-size: 20px;
+}
+span{
+  font-style: italic;
+}
+

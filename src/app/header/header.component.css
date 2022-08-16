@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-height: 300px;
 }
 :root
 {
@@ -24,7 +25,8 @@ body{
 .navigation{
   width: 400px;
   height: 70px;
-  background: #383838;
+  background: #1B1A17;
+  box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
   position: relative;
   display: flex;
   justify-content: center;

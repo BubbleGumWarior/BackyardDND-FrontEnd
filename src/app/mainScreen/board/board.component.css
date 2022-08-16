@@ -5,4 +5,63 @@ body{
   font-family: 'Montserrat', serif;
   background-color: #1B1A17;
   color: #E3B04B;
+  height: auto;
+}
+.row{
+  display: flex;
+  padding: 20px;
+}
+.col-10{
+  flex: 0 0 auto;
+  width: 10%;
+  padding: 15px;
+}
+.col-15{
+  flex: 0 0 auto;
+  width: 15%;
+  padding: 15px;
+}
+.col-20{
+  flex: 0 0 auto;
+  width: 20%;
+  padding: 15px;
+}
+.col-33{
+  flex: 0 0 auto;
+  width: 33.33%;
+  padding: 15px;
+}
+.col-50{
+  flex: 0 0 auto;
+  width: 50%;
+  padding: 15px;
+}
+.col-60{
+  flex: 0 0 auto;
+  width: 60%;
+  padding: 15px;
+}
+.col-70{
+  flex: 0 0 auto;
+  width: 70%;
+  padding: 15px;
+}
+.col-80{
+  flex: 0 0 auto;
+  width: 80%;
+  padding: 15px;
+}
+.col-100{
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 15px;
+}
+.statGroup{
+  display: flex;
+  border: 1px solid #E3B04B;
+  min-height: 336px;
+}
+h2{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }

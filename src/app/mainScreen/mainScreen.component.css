@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+body{
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Montserrat', serif;
+  background-color: #1B1A17;
+  color: #E3B04B;
+  height: 400px;
+}
