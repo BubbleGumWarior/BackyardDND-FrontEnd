@@ -1,0 +1,12 @@
+{
+  "/echo/*": {
+    "target": "http://localhost:5000",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/frontend/*": {
+    "target": "http://localhost:4200",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

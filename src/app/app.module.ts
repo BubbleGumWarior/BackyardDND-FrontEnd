@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule} from "@angular/forms";
-import {LoginComponent} from "./login/login.component";
-import {HomeComponent} from "./mainScreen/home/home.component";
-import {BoardComponent} from "./mainScreen/board/board.component";
-import {GalleryComponent} from "./mainScreen/gallery/gallery.component";
-import {NotesComponent} from "./mainScreen/notes/notes.component";
-import {RollsComponent} from "./mainScreen/rolls/rolls.component";
-import {headerComponent} from "./header/header.component";
+import {LoginComponent} from "./components/login/login.component";
+import {HomeComponent} from "./components/mainScreen/home/home.component";
+import {BoardComponent} from "./components/mainScreen/board/board.component";
+import {GalleryComponent} from "./components/mainScreen/gallery/gallery.component";
+import {NotesComponent} from "./components/mainScreen/notes/notes.component";
+import {RollsComponent} from "./components/mainScreen/rolls/rolls.component";
+import {headerComponent} from "./components/header/header.component";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes} from "@angular/router";
-import { mainScreenComponent} from "./mainScreen/mainScreen.component";
+import { mainScreenComponent} from "./components/mainScreen/mainScreen.component";
+import {HttpClientModule} from "@angular/common/http";
+import { authInterceptorProviders } from "./helpers/auth.interceptor";
 
 const appRoutes:Routes = [
   {
@@ -35,13 +37,15 @@ const appRoutes:Routes = [
     NotesComponent,
     RollsComponent,
     headerComponent,
-    mainScreenComponent
+    mainScreenComponent,
+    authInterceptorProviders
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
     NoopAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
