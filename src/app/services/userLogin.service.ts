@@ -11,11 +11,11 @@ export class loginUser {
   constructor(
     private _http: HttpClient) {  }
 
-/*  registerUser(userModel: UserModel): Observable<UserModel> {
+  registerUser(userModel: UserModel): Observable<UserModel> {
     return this._http.post<UserModel>('http://localhost:5000/API/User/RegisterUser', userModel);
   }
 
-  loginUser(username: string, password: string) {
-
-  }*/
+  loginUser(userModel: UserModel) {
+    return this._http.post<UserModel>('http://localhost:5000/API/User/LoginUser', userModel);
+  }
 }

@@ -14,7 +14,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes} from "@angular/router";
 import { mainScreenComponent} from "./components/mainScreen/mainScreen.component";
 import {HttpClientModule} from "@angular/common/http";
-import { authInterceptorProviders } from "./helpers/auth.interceptor";
 
 const appRoutes:Routes = [
   {
@@ -38,7 +37,7 @@ const appRoutes:Routes = [
     RollsComponent,
     headerComponent,
     mainScreenComponent,
-    authInterceptorProviders
+
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
