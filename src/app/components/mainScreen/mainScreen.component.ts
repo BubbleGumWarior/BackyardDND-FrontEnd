@@ -1,5 +1,4 @@
 import { Component, OnInit} from "@angular/core";
-import { TokenStorageService } from '../../services/token-storage.service';
 
 @Component({
   selector: 'app-mainScreen',
@@ -12,21 +11,9 @@ export class mainScreenComponent implements OnInit {
   username?: string;
   currentUser: any;
 
-  constructor(private token: TokenStorageService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.isLoggedIn = !!this.token.getToken();
-
-    if (this.isLoggedIn) {
-      this.currentUser = this.token.getUser();
-
-      this.username = this.currentUser.username;
-    }
-  }
-
-  logout(): void {
-    this.token.signOut();
-    window.location.reload();
   }
 
   activeMenu = "menuHome";

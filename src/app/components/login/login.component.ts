@@ -27,17 +27,18 @@ export class LoginComponent implements OnInit {
 
   logIn() {
     let User = new UserModel(this.userName, "", this.password,)
-    let bLogin = this.service.loginUser(User);
-    if (bLogin) {
-      console.log(bLogin)
-      this.router.navigate(['mainScreen']);
-    }
-    else{
-      this.userName = "";
-      this.password = "";
+    this.service.login(User).then(res => {
+      console.log(res);
+      if (res) {
+        this.router.navigate(['mainScreen']);
+      }
+      else{
+        this.userName = "";
+        this.password = "";
 
-      alert("Invalid Login Credentials!")
-    }
+        alert("Invalid Login Credentials!")
+      }
+    });
   }
 
   validateEmail(mail:string){
@@ -73,7 +74,15 @@ export class LoginComponent implements OnInit {
       alert(errorMessage);
     } else {
       User = new UserModel(this.userName, this.email, this.password, );
-      console.log(this.service.registerUser(User));
+      this.service.registerUser(User).then(res => {
+        if (res === true) {
+          alert("User Created!")
+          this.toggleLogin();
+        }
+        else{
+          alert("Error With user Creation!")
+        }
+      })
     }
   }
 }

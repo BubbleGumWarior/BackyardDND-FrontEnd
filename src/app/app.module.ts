@@ -10,9 +10,9 @@ import {GalleryComponent} from "./components/mainScreen/gallery/gallery.componen
 import {NotesComponent} from "./components/mainScreen/notes/notes.component";
 import {RollsComponent} from "./components/mainScreen/rolls/rolls.component";
 import {headerComponent} from "./components/header/header.component";
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes} from "@angular/router";
-import { mainScreenComponent} from "./components/mainScreen/mainScreen.component";
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {RouterModule, Routes} from "@angular/router";
+import {mainScreenComponent} from "./components/mainScreen/mainScreen.component";
 import {HttpClientModule} from "@angular/common/http";
 
 const appRoutes:Routes = [

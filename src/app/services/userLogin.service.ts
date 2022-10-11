@@ -1,8 +1,7 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {UserModel} from "../components/login/model/user.model";
-import {BehaviorSubject, catchError, Observable, of, Subscription, tap} from 'rxjs'
-import { map } from 'rxjs/operators';
+import {Observable} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +10,11 @@ export class loginUser {
   constructor(
     private _http: HttpClient) {  }
 
-  registerUser(userModel: UserModel): Observable<UserModel> {
-    return this._http.post<UserModel>('http://localhost:5000/API/User/RegisterUser', userModel);
+  public async registerUser(userModel: UserModel) : Promise<any>  {
+    return await this._http.post<boolean>('http://localhost:5000/API/User/RegisterUser', userModel).toPromise();
   }
 
-  loginUser(userModel: UserModel) {
-    return this._http.post<UserModel>('http://localhost:5000/API/User/LoginUser', userModel);
+  public async login(userModel: UserModel) : Promise<any>  {
+    return await this._http.post<boolean>('http://localhost:5000/API/User/LoginUser', userModel).toPromise();
   }
 }
