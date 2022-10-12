@@ -53,39 +53,63 @@ export class RollsComponent implements OnInit {
   }
 
 
-  rollD20() {
-    this.InitialRoll = Math.floor(Math.random() * 20) + 1;
-    this.FinalRoll = this.InitialRoll + this.Modifier;
+  async rollD20() {
+    for (let i = 0; i < 50; i++) {
+      await this.delay(30).then(r => {
+      });
+      this.InitialRoll = Math.floor(Math.random() * 20) + 1;
+      this.FinalRoll = this.InitialRoll + this.Modifier;
+    }
     this.sendRoll()
   }
 
-  rollD6() {
-    this.InitialRoll = Math.floor(Math.random() * 20) + 1;
-    this.FinalRoll = this.InitialRoll + this.Modifier;
+  async rollD6() {
+    for (let i = 0; i < 50; i++) {
+      await this.delay(30).then(r => {
+      });
+      this.InitialRoll = Math.floor(Math.random() * 6) + 1;
+      this.FinalRoll = this.InitialRoll + this.Modifier;
+    }
     this.sendRoll()
   }
 
-  rollD4() {
-    this.InitialRoll = Math.floor(Math.random() * 20) + 1;
-    this.FinalRoll = this.InitialRoll + this.Modifier;
+  async rollD4() {
+    for (let i = 0; i < 50; i++) {
+      await this.delay(30).then(r => {
+      });
+      this.InitialRoll = Math.floor(Math.random() * 4) + 1;
+      this.FinalRoll = this.InitialRoll + this.Modifier;
+    }
     this.sendRoll()
   }
 
-  rollD12() {
-    this.InitialRoll = Math.floor(Math.random() * 20) + 1;
-    this.FinalRoll = this.InitialRoll + this.Modifier;
+  async rollD12() {
+    for (let i = 0; i < 50; i++) {
+      await this.delay(30).then(r => {
+      });
+      this.InitialRoll = Math.floor(Math.random() * 12) + 1;
+      this.FinalRoll = this.InitialRoll + this.Modifier;
+    }
     this.sendRoll()
   }
 
-  rollD8() {
-    this.InitialRoll = Math.floor(Math.random() * 20) + 1;
-    this.FinalRoll = this.InitialRoll + this.Modifier;
+  async rollD8() {
+    for (let i = 0; i < 50; i++) {
+      await this.delay(30).then(r => {
+      });
+      this.InitialRoll = Math.floor(Math.random() * 8) + 1;
+      this.FinalRoll = this.InitialRoll + this.Modifier;
+    }
     this.sendRoll()
   }
 
-  rollD10() {
-    this.InitialRoll = Math.floor(Math.random() * 20) + 1;
-    this.FinalRoll = this.InitialRoll + this.Modifier;
+  async rollD10() {
+    for (let i = 0; i < 50; i++) {
+      await this.delay(30).then(r => {
+      });
+      this.InitialRoll = Math.floor(Math.random() * 10) + 1;
+      this.FinalRoll = this.InitialRoll + this.Modifier;
+    }
     this.sendRoll()
   }
 
@@ -105,15 +129,17 @@ export class RollsComponent implements OnInit {
     console.log(this.bVisible)
   }
 
-  randomCustom() {
+  async randomCustom() {
     if (isNaN(this.customDice)) {
       alert("Enter a Number Please!")
-    }
-    else {
+    } else {
       this.bVisible = true;
-      console.log(this.bVisible)
-      this.InitialRoll = Math.floor(Math.random() * this.customDice) + 1;
-      this.FinalRoll = this.InitialRoll + this.Modifier;
+      for (let i = 0; i < 50; i++) {
+        await this.delay(30).then(r => {
+        });
+        this.InitialRoll = Math.floor(Math.random() * this.customDice) + 1;
+        this.FinalRoll = this.InitialRoll + this.Modifier;
+      }
       this.sendRoll()
     }
   }
@@ -121,5 +147,9 @@ export class RollsComponent implements OnInit {
   sendRoll() {
     let userRoll = new rollModel(this.userCharacter.userName, this.InitialRoll, this.Modifier);
     this.authService.sendRoll(userRoll);
+  }
+
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
   }
 }

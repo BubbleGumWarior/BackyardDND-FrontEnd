@@ -32,6 +32,6 @@ export class loginUser {
   }
 
   public async sendRoll(diceRoll: rollModel) : Promise<any>  {
-    return await this._http.post<boolean>('http://localhost:5000/API/User/sendRoll', diceRoll).toPromise();
+    return await this._http.post<string>('http://localhost:5000/API/User/sendRoll', diceRoll).toPromise();
   }
 }
