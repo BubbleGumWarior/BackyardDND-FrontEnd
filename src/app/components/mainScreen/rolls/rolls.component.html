@@ -1,27 +1,35 @@
 <body>
   <div class="container">
+
     <div class="row">
       <div class="col-30">
         <div class="navigation" (click)="toggleActive()">
-          <span style="--i:0;--x:-1;--y:0"><i>D10</i></span>
-          <span style="--i:1;--x:1;--y:0"><i>D20</i></span>
-          <span style="--i:2;--x:0;--y:-1"><i>D6</i></span>
-          <span style="--i:3;--x:0;--y:1"><i class="fa-solid fa-compass-drafting"></i></span>
-          <span style="--i:4;--x:1;--y:1"><i class="fa-solid fa-minus"></i></span>
-          <span style="--i:5;--x:-1;--y:-1"><i>D4</i></span>
-          <span style="--i:6;--x:0;--y:0"><i>D12</i></span>
-          <span style="--i:7;--x:-1;--y:1"><i class="fa-solid fa-plus"></i></span>
-          <span style="--i:8;--x:1;--y:-1"><i>D8</i></span>
+          <span style="--i:0;--x:-1;--y:0"><i (click)="rollD10()">D10</i></span>
+          <span style="--i:1;--x:1;--y:0"><i (click)="rollD20()">D20</i></span>
+          <span style="--i:2;--x:0;--y:-1"><i (click)="rollD6()">D6</i></span>
+          <span style="--i:3;--x:0;--y:1"><i (click)="customRoll()" class="fa-solid fa-compass-drafting"></i></span>
+          <span style="--i:4;--x:1;--y:1"><i (click)="MinusModifier()" class="fa-solid fa-minus"></i></span>
+          <span style="--i:5;--x:-1;--y:-1"><i (click)="rollD4()">D4</i></span>
+          <span style="--i:6;--x:0;--y:0"><i (click)="rollD12()">D12</i></span>
+          <span style="--i:7;--x:-1;--y:1"><i (click)="AddModifier()" class="fa-solid fa-plus"></i></span>
+          <span style="--i:8;--x:1;--y:-1"><i (click)="rollD8()">D8</i></span>
         </div>
       </div>
       <div class="col-70">
         <h2>You have rolled a <span>D20</span></h2>
         <div class="rollGroup">
-          <h4>You have rolled a <span>15</span></h4>
-          <h4>With a modifier of <span>+2</span></h4>
+          <h4>You have rolled a <span>{{InitialRoll}}</span></h4>
+          <h4>With a modifier of <span>{{Modifier}}</span></h4>
         </div>
         <h3>Your Final Roll:</h3>
-        <h1>17</h1>
+        <h1>{{FinalRoll}}</h1>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-20">
+        <input [hidden]="bVisible" type="custom" placeholder="Custom" value="100" [(ngModel)]="customDice" name="custom">
+        <input [hidden]="bVisible" type="submit" id="submitLogin" value="Roll" (click)="randomCustom()">
       </div>
     </div>
   </div>

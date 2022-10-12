@@ -9,6 +9,9 @@ body{
 }
 .row{
   display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  min-height: 160px;
 }
 .col-10{
   flex: 0 0 auto;
@@ -19,6 +22,7 @@ body{
   flex: 0 0 auto;
   width: 20%;
   padding: 15px;
+  margin-left: 33.33%;
 }
 .col-30{
   flex: 0 0 auto;
@@ -143,5 +147,18 @@ h4{
 }
 span{
   font-style: italic;
+}
+input{
+  width: 100%;
+  padding: 10px;
+  background: #1B1A17;
+  box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
+  color: #E3B04B;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin: 8px 0;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { MainScreenModel } from "../mainScreen.model";
 import {UserModel} from "../../login/model/user.model";
 import {UserCharacter} from "../../login/model/character/userCharacter.model";
 import {Router} from "@angular/router";
