@@ -7,14 +7,4 @@ export class UserModel {
     this.email = email;
     this.password = password;
   }
-
-  getUserName(): string {
-    return <string>this.userName;
-  }
-  getEmail(): string {
-    return <string>this.email;
-  }
-  getPassword(): string {
-    return <string>this.password;
-  }
 }
