@@ -2,6 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
 import {UserModel} from "./model/user.model";
 import {loginUser} from "../../services/userLogin.service";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
   email: string;
   confirmPassword: string;
 
-  constructor(private router: Router, private service:loginUser) {  }
+  /*constructor(private router: Router, private service:loginUser) {  }*/
+  constructor(private router: Router, private authService:AuthService) {  }
 
   ngOnInit(): void {
   }
@@ -27,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   logIn() {
     let User = new UserModel(this.userName, "", this.password,)
-    this.service.login(User).then(res => {
+    this.authService.login(User).then(res => {
       console.log(res);
       if (res) {
         this.router.navigate(['mainScreen']);
@@ -74,8 +76,8 @@ export class LoginComponent implements OnInit {
       alert(errorMessage);
     } else {
       User = new UserModel(this.userName, this.email, this.password, );
-      this.service.registerUser(User).then(res => {
-        if (res === true) {
+      this.authService.registerUser(User).then(res => {
+        if (res) {
           alert("User Created!")
           this.toggleLogin();
         }
