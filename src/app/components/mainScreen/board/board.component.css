@@ -10,6 +10,7 @@ body{
 .row{
   display: flex;
   padding: 20px;
+  justify-content: center;
 }
 .col-10{
   flex: 0 0 auto;

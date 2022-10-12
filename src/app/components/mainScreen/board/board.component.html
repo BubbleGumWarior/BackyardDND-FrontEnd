@@ -8,16 +8,15 @@
           <h2>Strength</h2>
         </div>
         <div class="col-20">
-          <h1>13</h1>
-          <h4>+2</h4>
+          <h1><span *ngIf="userCharacter.strength">{{userCharacter.strength[0]}}</span></h1>
         </div>
         <div class="col-50">
           <h3>Athletics</h3>
           <h3>Weight</h3>
         </div>
         <div class="col-15">
-          <h3>+3</h3>
-          <h3>0</h3>
+          <h3><span *ngIf="userCharacter.strength">{{userCharacter.strength[1]}}</span></h3>
+          <h3><span *ngIf="userCharacter.strength">{{userCharacter.strength[2]}}</span></h3>
         </div>
       </div>
       <div class="statGroup">
@@ -25,8 +24,7 @@
           <h2>Dexterity</h2>
         </div>
         <div class="col-20">
-          <h1>18</h1>
-          <h4>+4</h4>
+          <h1><span *ngIf="userCharacter.dexterity">{{userCharacter.dexterity[0]}}</span></h1>
         </div>
         <div class="col-50">
           <h3>Acrobatics</h3>
@@ -34,9 +32,9 @@
           <h3>Stealth</h3>
         </div>
         <div class="col-15">
-          <h3>+3</h3>
-          <h3>0</h3>
-          <h3>+2</h3>
+          <h3><span *ngIf="userCharacter.dexterity">{{userCharacter.dexterity[1]}}</span></h3>
+          <h3><span *ngIf="userCharacter.dexterity">{{userCharacter.dexterity[2]}}</span></h3>
+          <h3><span *ngIf="userCharacter.dexterity">{{userCharacter.dexterity[3]}}</span></h3>
         </div>
       </div>
       <div class="statGroup">
@@ -44,8 +42,7 @@
           <h2>Constitution</h2>
         </div>
         <div class="col-20">
-          <h1>6</h1>
-          <h4>-2</h4>
+          <h1><span *ngIf="userCharacter.constitution">{{userCharacter.constitution[0]}}</span></h1>
         </div>
         <div class="col-50">
         </div>
@@ -57,13 +54,13 @@
   <div class="col-33">
     <div class="biometrics">
       <h1>Character</h1>
-      <h2>Name: <span>Daeron Brightflame</span></h2>
-      <h2>Race: <span>Human</span></h2>
-      <h2>Class: <span>Level 5 Rogue</span></h2>
-      <h2>Alignment: <span>Neutral Evil</span></h2>
+      <h2>Name: <span>{{userCharacter.name}}</span></h2>
+      <h2>Race: <span>{{userCharacter.race}}</span></h2>
+      <h2>Class: <span>{{userCharacter.className}}</span></h2>
+      <h2>Alignment: <span>{{userCharacter.alignment}}</span></h2>
     </div>
     <div class="photoGroup">
-      <img src="../../../../assets/Daeron%20Brightflame.jpg" alt="">
+      <img [src]="userCharacter.imagePath" alt="">
     </div>
   </div>
   <div class="col-33">
@@ -74,8 +71,7 @@
           <h2>Intelligence</h2>
         </div>
         <div class="col-20">
-          <h1>18</h1>
-          <h4>+4</h4>
+          <h1><span *ngIf="userCharacter.intelligence">{{userCharacter.intelligence[0]}}</span></h1>
         </div>
         <div class="col-50">
           <h3>History</h3>
@@ -84,10 +80,10 @@
           <h3>Religion</h3>
         </div>
         <div class="col-15">
-          <h3>+3</h3>
-          <h3>0</h3>
-          <h3>+1</h3>
-          <h3>-3</h3>
+          <h3><span *ngIf="userCharacter.intelligence">{{userCharacter.intelligence[1]}}</span></h3>
+          <h3><span *ngIf="userCharacter.intelligence">{{userCharacter.intelligence[2]}}</span></h3>
+          <h3><span *ngIf="userCharacter.intelligence">{{userCharacter.intelligence[3]}}</span></h3>
+          <h3><span *ngIf="userCharacter.intelligence">{{userCharacter.intelligence[4]}}</span></h3>
         </div>
       </div>
       <div class="statGroup">
@@ -95,8 +91,7 @@
           <h2>Wisdom</h2>
         </div>
         <div class="col-20">
-          <h1>17</h1>
-          <h4>+3</h4>
+          <h1><span *ngIf="userCharacter.wisdom">{{userCharacter.wisdom[0]}}</span></h1>
         </div>
         <div class="col-50">
           <h3>Animal Handling</h3>
@@ -106,11 +101,11 @@
           <h3>Survival</h3>
         </div>
         <div class="col-15">
-          <h3>+3</h3>
-          <h3>0</h3>
-          <h3>-4</h3>
-          <h3>+2</h3>
-          <h3>+1</h3>
+          <h3><span *ngIf="userCharacter.wisdom">{{userCharacter.wisdom[1]}}</span></h3>
+          <h3><span *ngIf="userCharacter.wisdom">{{userCharacter.wisdom[2]}}</span></h3>
+          <h3><span *ngIf="userCharacter.wisdom">{{userCharacter.wisdom[3]}}</span></h3>
+          <h3><span *ngIf="userCharacter.wisdom">{{userCharacter.wisdom[4]}}</span></h3>
+          <h3><span *ngIf="userCharacter.wisdom">{{userCharacter.wisdom[5]}}</span></h3>
         </div>
       </div>
       <div class="statGroup">
@@ -118,8 +113,7 @@
           <h2>Charisma</h2>
         </div>
         <div class="col-20">
-          <h1>16</h1>
-          <h4>+3</h4>
+          <h1><span *ngIf="userCharacter.charisma">{{userCharacter.charisma[0]}}</span></h1>
         </div>
         <div class="col-50">
           <h3>Deception</h3>
@@ -128,10 +122,10 @@
           <h3>Persuasion</h3>
         </div>
         <div class="col-15">
-          <h3>+3</h3>
-          <h3>0</h3>
-          <h3>-3</h3>
-          <h3>-1</h3>
+          <h3><span *ngIf="userCharacter.charisma">{{userCharacter.charisma[1]}}</span></h3>
+          <h3><span *ngIf="userCharacter.charisma">{{userCharacter.charisma[2]}}</span></h3>
+          <h3><span *ngIf="userCharacter.charisma">{{userCharacter.charisma[3]}}</span></h3>
+          <h3><span *ngIf="userCharacter.charisma">{{userCharacter.charisma[4]}}</span></h3>
         </div>
       </div>
     </div>
@@ -141,7 +135,7 @@
   <div class="row">
     <div class="Description">
       <h1>Description</h1>
-      <p>Aitnhaoiuhwdfiu9 aorfnonf aonfoanwofn aownf awoinf gfaw ongoawin aopmn wofnao nmoangen aomadco moawinfo masdfAitnhaoiuhwdfiu9 aorfnonf aonfoanwofn aownf awoinf gfaw ongoawin aopmn wofnao nmoangen aomadco moawinfo masdfAitnhaoiuhwdfiu9 aorfnonf aonfoanwofn aownf awoinf gfaw ongoawin aopmn wofnao nmoangen aomadco moawinfo masdfAitnhaoiuhwdfiu9 aorfnonf aonfoanwofn aownf awoinf gfaw ongoawin aopmn wofnao nmoangen aomadco moawinfo masdf</p>
+      <p>{{userCharacter.description}}</p>
     </div>
   </div>
 </div>
@@ -152,25 +146,25 @@
       <div class="col-33">
         <div class="descGroup">
           <h2>Personality Traits</h2>
-          <h3><span>Arrogant</span></h3>
-          <h3><span>Sly</span></h3>
-          <h3><span>Secretive</span></h3>
+          <h3><span *ngIf="userCharacter.personalityTraits">{{userCharacter.personalityTraits[0]}}</span></h3>
+          <h3><span *ngIf="userCharacter.personalityTraits">{{userCharacter.personalityTraits[1]}}</span></h3>
+          <h3><span *ngIf="userCharacter.personalityTraits">{{userCharacter.personalityTraits[2]}}</span></h3>
         </div>
       </div>
       <div class="col-33">
         <div class="descGroup">
           <h2>Flaws</h2>
-          <h3><span>Greedy</span></h3>
-          <h3><span>Untrusting</span></h3>
-          <h3><span>Defensive</span></h3>
+          <h3><span *ngIf="userCharacter.flaws">{{userCharacter.flaws[0]}}</span></h3>
+          <h3><span *ngIf="userCharacter.flaws">{{userCharacter.flaws[1]}}</span></h3>
+          <h3><span *ngIf="userCharacter.flaws">{{userCharacter.flaws[2]}}</span></h3>
         </div>
       </div>
       <div class="col-33">
         <div class="descGroup">
           <h2>Ideals</h2>
-          <h3><span>Swords</span></h3>
-          <h3><span>Bows</span></h3>
-          <h3><span>Daggers</span></h3>
+          <h3><span *ngIf="userCharacter.ideals">{{userCharacter.ideals[0]}}</span></h3>
+          <h3><span *ngIf="userCharacter.ideals">{{userCharacter.ideals[1]}}</span></h3>
+          <h3><span *ngIf="userCharacter.ideals">{{userCharacter.ideals[2]}}</span></h3>
         </div>
       </div>
     </div>
@@ -181,12 +175,10 @@
         <div class="descGroup">
           <h2>Family</h2>
           <div class="relationshipGroup">
-            <h3><span>Raynes Brightflame</span></h3>
-            <h3><span>Sister</span></h3>
+            <h3><span *ngIf="userCharacter.family">{{userCharacter.family[0]}}</span></h3>
           </div>
           <div class="relationshipGroup">
-            <h3><span>Baelor Brightflame</span></h3>
-            <h3><span>Brother</span></h3>
+            <h3><span *ngIf="userCharacter.family">{{userCharacter.family[1]}}</span></h3>
           </div>
         </div>
       </div>
@@ -194,12 +186,10 @@
         <div class="descGroup">
           <h2>Friends</h2>
           <div class="relationshipGroup">
-            <h3><span>Malek Dorai</span></h3>
-            <h3><span>Best Friend</span></h3>
+            <h3><span *ngIf="userCharacter.friends">{{userCharacter.friends[0]}}</span></h3>
           </div>
           <div class="relationshipGroup">
-            <h3><span>Eric Dogel</span></h3>
-            <h3><span>Captain</span></h3>
+            <h3><span *ngIf="userCharacter.friends">{{userCharacter.friends[1]}}</span></h3>
           </div>
         </div>
       </div>

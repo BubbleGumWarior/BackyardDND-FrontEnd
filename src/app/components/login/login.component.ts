@@ -1,8 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
 import {UserModel} from "./model/user.model";
-import {loginUser} from "../../services/userLogin.service";
 import {AuthService} from "../../services/auth.service";
+import {mainScreenComponent} from "../mainScreen/mainScreen.component";
 
 @Component({
   selector: 'app-login',
@@ -16,10 +16,10 @@ export class LoginComponent implements OnInit {
   email: string;
   confirmPassword: string;
 
-  /*constructor(private router: Router, private service:loginUser) {  }*/
   constructor(private router: Router, private authService:AuthService) {  }
 
   ngOnInit(): void {
+    localStorage.clear();
   }
   toggleLogin() {
     const list = document.querySelectorAll('.container');
@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
       console.log(res);
       if (res) {
         this.router.navigate(['mainScreen']);
+        localStorage.setItem('Username', this.userName);
       }
       else{
         this.userName = "";
@@ -67,7 +68,7 @@ export class LoginComponent implements OnInit {
         errors.push("Password is too short!")
       }
     }
-    let User;
+    let User: UserModel;
     if (errors.length > 0) {
       let errorMessage = "";
       errors.forEach(function (message) {
@@ -76,13 +77,30 @@ export class LoginComponent implements OnInit {
       alert(errorMessage);
     } else {
       User = new UserModel(this.userName, this.email, this.password, );
-      this.authService.registerUser(User).then(res => {
+
+      this.authService.checkUnique(User).then(res => {
         if (res) {
-          alert("User Created!")
-          this.toggleLogin();
+          this.authService.registerUser(User).then(res => {
+            if (res) {
+              alert("User Created!")
+              this.authService.createCharacter(User).then(res => {
+                if (res) {
+                  alert("Character Created!")
+                  this.toggleLogin();
+                }
+                else{
+                  alert("Error With Character Creation!")
+                }
+              });
+            }
+            else{
+              alert("Error With user Creation!")
+            }
+          })
         }
-        else{
-          alert("Error With user Creation!")
+        else {
+          alert("Username Already Exists!")
+          this.userName = "";
         }
       })
     }

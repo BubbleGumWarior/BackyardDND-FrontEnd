@@ -46,7 +46,7 @@ const appRoutes:Routes = [
     NoopAnimationsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [LoginComponent, mainScreenComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

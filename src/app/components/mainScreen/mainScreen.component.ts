@@ -1,4 +1,8 @@
 import { Component, OnInit} from "@angular/core";
+import {UserModel} from "../login/model/user.model";
+import {AuthService} from "../../services/auth.service";
+import {LoginComponent} from "../login/login.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-mainScreen',
@@ -7,13 +11,25 @@ import { Component, OnInit} from "@angular/core";
 })
 
 export class mainScreenComponent implements OnInit {
-  isLoggedIn = false;
   username?: string;
-  currentUser: any;
 
-  constructor() { }
+  constructor(private router: Router, private authService:AuthService) { }
 
   ngOnInit(): void {
+    let userName = localStorage.getItem('Username');
+    if (userName != null){
+      let User = new UserModel(userName, "","",);
+      this.authService.loadCharacter(User).then(res => {
+        if (res === null){
+          alert("Account Error, Not All Values loaded Properly. Contact Sebastian.")
+          this.router.navigate(['']);
+        }
+      })
+    }
+    else{
+      alert('Not Logged In!');
+      this.router.navigate(['']);
+    }
   }
 
   activeMenu = "menuHome";

@@ -1,6 +1,7 @@
 import {Injectable} from "@angular/core";
 import {loginUser} from "./userLogin.service";
 import {UserModel} from "../components/login/model/user.model";
+import {UserCharacter} from "../components/login/model/character/userCharacter.model";
 
 @Injectable({
   providedIn: 'root',
@@ -15,5 +16,17 @@ export class AuthService {
 
   async registerUser(userModel: UserModel): Promise<boolean> {
     return await this.apiService.registerUser(userModel);
+  }
+
+  async checkUnique(userModel: UserModel): Promise<boolean> {
+    return await this.apiService.checkUnique(userModel);
+  }
+
+  async createCharacter(userModel: UserModel): Promise<boolean> {
+    return await this.apiService.createCharacter(userModel);
+  }
+
+  async loadCharacter(userModel: UserModel): Promise<UserCharacter> {
+    return await this.apiService.loadCharacter(userModel);
   }
 }

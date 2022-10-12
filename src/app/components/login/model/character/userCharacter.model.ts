@@ -2,7 +2,7 @@ export class UserCharacter {
   public userName?: string;
   public name?: string;
   public race?: string;
-  public alignment?: string[];
+  public alignment?: string;
   public className?: string;
   public age?: number;
   public currentHealth?: number;
@@ -17,8 +17,14 @@ export class UserCharacter {
   public family?: string[];
   public friends?: string[];
   public imagePath?: string;
+  public strength?: number[];
+  public dexterity?: number[];
+  public constitution?: number[];
+  public intelligence?: number[];
+  public wisdom?: number[];
+  public charisma?: number[];
 
-  constructor(userName: string, name: string, race: string, alignment: string[], className: string, age: number, currentHealth: number, maxHealth: number, currentMana: number, maxMana: number, experience: number, personalityTraits: string[], flaws: string[], ideals: string[], description: string, family: string[], friends: string[], imagePath: string) {
+  constructor(userName: string, name: string, race: string, alignment: string, className: string, age: number, currentHealth: number, maxHealth: number, currentMana: number, maxMana: number, experience: number, personalityTraits: string[], flaws: string[], ideals: string[], description: string, family: string[], friends: string[], imagePath: string, strength: number[], dexterity: number[], constitution: number[], intelligence: number[], wisdom: number[], charisma: number[]) {
     this.userName = userName;
     this.name = name;
     this.race = race;
@@ -37,5 +43,11 @@ export class UserCharacter {
     this.family = family;
     this.friends = friends;
     this.imagePath = imagePath;
+    this.strength = strength;
+    this.dexterity = dexterity;
+    this.constitution = constitution;
+    this.intelligence = intelligence;
+    this.wisdom = wisdom;
+    this.charisma = charisma;
   }
 }
